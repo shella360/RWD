@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+    width: 268px;
+    height: 100vh;
+    background-color: wheat;
+    float: left;
+    padding: 50px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+li {
+    background-color: #fff;
+    margin: 0 auto 10px;
+    width: 150px;
+    height: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.main {
+    width: calc(100% - 268px);
+    height: 100vh;
+    background-color: pink;
+    float: left;
+    position: relative;
+}
+
+.concent {
+    width: 1000px;
+    height: 600px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.X,
+.Y,
+.Z {
+    width: calc((100% - 10px) / 3);
+    height: 100%;
+    background-color: lightblue;
+    float: left
+}
+
+.X,
+.Y {
+    margin-right: 5px;
+}
+
+@media (max-width:1500px) {
+    .concent {
+        width: 1000px;
+    }
+    .X {
+        width: 100%;
+        height: calc((100% - 5px) / 2);
+        margin-bottom: 5px;
+    }
+    .Y,.Z {
+        width: calc((100% - 5px) / 2);
+        height: calc((100% - 5px) / 2);
+    }
+}
+
+@media (max-width:1300px) {
+    .header {
+        width: 100%;
+        height: 100px;
+        padding: 10px 10px;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+        float: left;
+    }
+
+    ul {
+        float: right;
+    }
+
+    li {
+        display: inline-block;
+        margin: 10px 20px 10px 0px;
+
+    }
+
+    .main {
+        width: 100%;
+        height: calc(100vh - 100px);
+    }
+
+    .X
+}
+
+@media (max-width:1100px) {
+    .header {
+        width: 100%;
+        height: 100px;
+        position: relative;
+    }
+
+   
+    ul{
+        display: none;
+        float: none;
+    }
+    li{
+        margin-left: 20px;
+        transition: 2s;
+    }
+    
+    .logo {
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+    .dropdown{
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        z-index: 2;
+
+    }
+    .hamburger {
+        width: 80px;
+        height: 80px;
+        float: left;
+        background-image: url(./hamburger.png);
+        background-size: cover;
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown:hover>ul{
+        display: block;
+    }
+   
+    .concent{
+        width: 100vw;
+        height: calc(100vh - 100px); 
+    }
+    .X,.Y,.Z{
+        width: 100vw;
+        height: calc((100vh - 100px) / 3);
+        margin: 0px;
+    }
+    
+    } 
